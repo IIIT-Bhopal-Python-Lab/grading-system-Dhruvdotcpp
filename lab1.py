@@ -1,30 +1,36 @@
-#Write your code here in python
-def grading():
+# Python program to convert marks into grades
 
-    marks = input("Enter your marks here: ") # Ask the user to enter marks or type EXIT to quit
+def get_grade():
+    # Prompt the user to enter marks or type EXIT to quit
+    marks = input("Please enter your marks (or type 'EXIT' to quit): ")
     
-    if(marks=="EXIT"): # Check if the user wants to exit the program
-        print("Exiting the program.")
+    # Check if the user wants to exit
+    if marks.upper() == "EXIT":
+        print("Program terminated.")
         return
     
-    try: # if I give any input then try should execute but if some error occurs then except should run
+    try:
+        # Attempt to convert the input to an integer
         marks = int(marks)
-    
-        if marks >= 90:
-            print("A")
-        elif marks >= 75:
-            print("B")
-        elif marks >= 60:
-            print("C")
-        elif marks >= 40:
-            print("D")
-        elif marks >= 0:
-            print("F")
-        else:
-            print("Invalid Input")
         
-    except ValueError: # when input is other than digits
-        print("Invalid Input")
+        # Determine grade based on the marks entered
+        if 0 <= marks < 40:
+            print("Grade: F")
+        elif 40 <= marks <= 59:
+            print("Grade: D")
+        elif 60 <= marks <= 74:
+            print("Grade: C")
+        elif 75 <= marks <= 89:
+            print("Grade: B")
+        elif 90 <= marks <= 100:
+            print("Grade: A")
+        else:
+            print("Invalid marks! Please enter a number between 0 and 100.")
+    
+    except ValueError:
+        # Handle non-numeric input
+        print("Invalid input! Please enter a valid number between 0 and 100.")
 
-grading()
-# End of Program
+get_grade()
+
+# End of program
