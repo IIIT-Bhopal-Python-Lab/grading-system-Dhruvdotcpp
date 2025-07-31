@@ -1,36 +1,24 @@
-# Python program to convert marks into grades
-
+#Write your code here in python
 def get_grade():
-    # Prompt the user to enter marks or type EXIT to quit
-    marks = input("Please enter your marks (or type 'EXIT' to quit): ")
+
+    marks = input("Enter your marks here: ") # marks variable is been given input
     
-    # Check if the user wants to exit
-    if marks.upper() == "EXIT":
-        print("Program terminated.")
+    if(marks=="EXIT"): # when I input EXIT then program should exit
+        print("Exit the program")
         return
     
-    try:
-        # Attempt to convert the input to an integer
+    try: # if I give any input then try should execute but if some error occurs then except should run
         marks = int(marks)
-        
-        # Determine grade based on the marks entered
-        if 0 <= marks < 40:
-            print("F")
-        elif 40 <= marks <= 59:
-            print("D")
-        elif 60 <= marks <= 74:
-            print("C")
-        elif 75 <= marks <= 89:
-            print("B")
-        elif 90 <= marks <= 100:
-            print("A")
-        else:
-            print("Invalid marks! Please enter a number between 0 and 100.")
     
-    except ValueError:
-        # Handle non-numeric input
-        print("Invalid input! Please enter a valid number between 0 and 100.")
+        if(marks>=0 and marks<40): print("F") # if marks is greater than or equal to 0 and less than 40 then it should print F
+        elif(marks>=40 and marks<=59): print("D") # if marks is greater than or equal to 40 and less than or equal to 59 then it should print 
+        elif(marks>=60 and marks<=74): print("C") # if marks is greater than or equal to 60 and less than or equal to 74 then it should print C
+        elif(marks>=75 and marks<=89): print("B") # if marks is greater than or equal to 75 and less than or equal to 89 then it should print B
+        elif(marks>=90 and marks<=100): print("A") # if marks is greater than or equal to 90 and less than or equal to 100 then it should print A
+        else: print("Invalid Input") # when input is numeric but not in the range bw 0 and 100
+        
+    except ValueError: # when input is other than digits
+        print("Error....Enter number bw 0 and 100")
 
 get_grade()
-
-# End of program
+# End of Program
