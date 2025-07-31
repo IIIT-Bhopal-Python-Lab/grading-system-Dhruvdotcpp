@@ -1,7 +1,7 @@
 # infinite loop to keep asking for input
 while True:
     # Ask the user to enter marks or type EXIT to quit
-    marks = input("Enter marks (0-100) or type EXIT to quit: ")
+    marks = input()
 
     # Check if the user wants to exit the program
     if marks.upper() == "EXIT":
