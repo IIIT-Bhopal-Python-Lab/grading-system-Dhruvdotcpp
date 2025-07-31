@@ -23,12 +23,12 @@ while True:
 
     # Check the grade based on the marks
     if marks >= 90:
-        print("Grade: A")
+        print("A")
     elif marks >= 75:
-        print("Grade: B")
+        print("B")
     elif marks >= 60:
-        print("Grade: C")
+        print("C")
     elif marks >= 40:
-        print("Grade: D")
+        print("D")
     else:
-        print("Grade: F")
+        print("F")
